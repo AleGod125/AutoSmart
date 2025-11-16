@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="dasboard.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo</title>
+</head>
+
+<body>
+
+  <h1 class="titulo-principal">Catálogo de Productos</h1>
+  <p class="subtitulo">Descubre nuestra amplia selección de productos</p>
+
+  <div class="container">
+
+    <aside class="filtro">
+
+      <p class="filtro-titulo"><i class="bi bi-funnel"></i> Filtros</p>
+
+      <button class="btn">Destacados <i class="bi bi-chevron-down"></i></button>
+
+      <p class="filtro-subtitulo">Categorías</p>
+
+      <button id="btnCategoria2" class="btn">
+        <i class="bi bi-collection"></i> Todas las Categorías
+        <i class="bi bi-chevron-down"></i>
+      </button>
+
+      <div id="Categorias2" class="Categorias"></div>
+
+      <hr class="divider">
+
+      <p class="filtro-subtitulo">Marcas</p>
+      <div id="Marcas" class="contenedor-marcas"></div>
+
+    </aside>
+
+    <section id="productos" class="productos"></section>
+
+  </div>
+
+  <script type="module" src="dasborard.js"></script>
+</body>
+
+</html>
