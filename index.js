@@ -1,4 +1,4 @@
-let iframe = document.getElementById('dashboardFrame');   
+let iframe = document.getElementById('dashboardFrame');
 const container = document.getElementById('person');
 const btnPerson = document.getElementById('btnperson');
 const btnLoguin = document.getElementById('btnLoguin');
@@ -12,12 +12,12 @@ let currentObservedBody = null;
 function ajusteIframe(url) {
 
   if (currentResizeObserver) {
-    try { currentResizeObserver.disconnect(); } catch {}
+    try { currentResizeObserver.disconnect(); } catch { }
     currentResizeObserver = null;
   }
 
   if (currentObservedBody) {
-    try { currentResizeObserver?.unobserve(currentObservedBody); } catch {}
+    try { currentResizeObserver?.unobserve(currentObservedBody); } catch { }
     currentObservedBody = null;
   }
 
@@ -63,13 +63,14 @@ function ajusteIframe(url) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   iframe.addEventListener("load", () => ajusteIframe(iframe.src));
 
 
-    btnLoguin.addEventListener('click', () => ajusteIframe("loguin/loguin.html"));
-    btnSingup.addEventListener('click', () => ajusteIframe("Regis/regis.html"));
-    btnhome.addEventListener('click', () => ajusteIframe("UI/dasboard/dasboard.html"));
+  btnLoguin.addEventListener('click', () => ajusteIframe("/AutoSmart/UI/loguin/loguin.html"));
+  btnSingup.addEventListener('click', () => ajusteIframe("/AutoSmart/UI/Regis/regis.html"));
+  btnhome.addEventListener('click', () => ajusteIframe("/AutoSmart/UI/dasboard/dasboard.html"));
+
 });
 
 btnPerson.addEventListener('click', () => {
