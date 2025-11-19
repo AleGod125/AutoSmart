@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnLoguin.addEventListener('click', () => ajusteIframe("loguin/loguin.html"));
     btnSingup.addEventListener('click', () => ajusteIframe("Regis/regis.html"));
-    btnhome.addEventListener('click', () => ajusteIframe("dasboard/dasboard.html"));
+    btnhome.addEventListener('click', () => ajusteIframe("UI/dasboard/dasboard.html"));
 });
 
 btnPerson.addEventListener('click', () => {
