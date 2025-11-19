@@ -1,4 +1,3 @@
-import { CallAllProductos, CallCategories } from '/data/Api.js';
 
 const btnCategorias = document.getElementById('btnCategoria2');
 const containerCat = document.getElementById('Categorias2');
@@ -7,21 +6,6 @@ const containerMarcas = document.getElementById('Marcas');
 
 let allProducts = [];
 
-document.addEventListener('DOMContentLoaded', init);
-
-async function init() {
-  try {
-    const categories = await CallCategories();
-    allProducts = await CallAllProductos();
-
-    renderProductos(allProducts);
-    renderMarcas(allProducts);
-    renderCategories(categories);
-
-  } catch (error) {
-    console.error('Error inicializando:', error);
-  }
-}
 
 function renderProductos(lista) {
   containerProductos.innerHTML = lista
@@ -61,7 +45,6 @@ function renderMarcas(productos) {
   });
 }
 
-// ==================== RENDER CATEGORÍAS ====================
 function renderCategories(categories) {
   containerCat.innerHTML = '';
 

@@ -8,13 +8,7 @@ body {
   padding-bottom: 5%;
 }
 
-.titulo-degradado {
-  font-size: 40px;
-  font-weight: bold;
-  background: linear-gradient(to right, black, #d36506, #fb7b09);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .register-container {
   background: #fff;
@@ -45,9 +39,7 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
