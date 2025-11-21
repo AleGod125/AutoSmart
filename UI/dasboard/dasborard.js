@@ -1,5 +1,5 @@
-import { fetchVehicles } from "/domain/ViewModel.js";
-import { Iframe } from "/domain/UI.js";
+import { fetchVehicles } from "./domain/ViewModel.js";
+import { Iframe } from "./domain/UI.js";
 
 
 const productos = document.getElementById("productos");

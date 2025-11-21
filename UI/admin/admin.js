@@ -1,4 +1,4 @@
-import { fetchPendingVehicles, approveVehicule, fetchVehicles, fetchSales  } from "/domain/ViewModel.js";
+import { fetchPendingVehicles, approveVehicule, fetchVehicles, fetchSales  } from "./domain/ViewModel.js";
 
 const radios = document.querySelectorAll('input[name="nav"]');
 
@@ -12,6 +12,7 @@ const numPendientes = document.getElementById("numPendientes")
 
 const Factura = document.getElementById("Factura")
 const InvFactura = document.getElementById("Ventas-list")
+const numF = document.getElementById("numF")
 
 
 
@@ -139,7 +140,7 @@ async function cargarVentas() {
 
     try {
         const data = await fetchSales();
-        numPendientes.textContent = data.length;
+        numF.textContent = data.length;
         InvFactura.innerHTML = "";
 
         if (!data || data.length === 0) {
@@ -169,8 +170,6 @@ async function cargarVentas() {
         console.error(error);
     }
 }
-
-
 
 window.aprobar = async function (id) {
     try {

@@ -111,8 +111,6 @@ sell.addEventListener('click', () => {
 
 
 
-
-// 🚀 Recibir mensajes desde el iframe
 window.addEventListener("message", (event) => {
 
   if (event.data?.action === "setUser") {

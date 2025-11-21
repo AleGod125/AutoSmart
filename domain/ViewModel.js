@@ -1,4 +1,4 @@
-import { savevehicule, signupApi, loguinApi, getPendingVehicles, approveVehicle, getVehicles,createSale, getSales } from "/data/Api.js";
+import { savevehicule, signupApi, loguinApi, getPendingVehicles, approveVehicle, getVehicles,createSale, getSales } from "./data/Api.js";
 
 export async function registerUser(name, email, password, phone) {
 
