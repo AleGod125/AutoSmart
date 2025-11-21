@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Panel de Administración</h1>
+    <p class="textsecundario">Gestiona inventario, ventas y vehículos pendientes</p>
+
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 24px;">
+        <div class="card">
+            <p class="text1">Inventario Total</p>
+            <h1 id="numInv"></h1>
+            <p class="textsecundario">vehiculos en sistema</p>
+        </div>
+
+        <div class="card">
+            <p class="text1">Ventas Totales</p>
+            <h1>123</h1>
+            <p class="textsecundario">Vehículos vendidos</p>
+        </div>
+
+        <div class="card">
+            <p class="text1">Ingresos Totales</p>
+            <h1>123</h1>
+            <p class="textsecundario">Total facturado</p>
+        </div>
+
+        <div class="card">
+            <p class="text1">Pendientes</p>
+            <h1 id="numPendientes"></h1>
+            <p class="textsecundario">Esperan aprobación</p>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <input type="radio" id="inv" name="nav" value="Inventario">
+        <label for="inv" >Inventario</label>
+
+        <input type="radio" id="pend" name="nav" value="Pendientes">
+        <label for="pend">Pendientes de Aprobación</label>
+
+        <input type="radio" id="fact" name="nav" value="Facturas">
+        <label for="fact">Facturas y Ventas</label>
+
+        <input type="radio" id="rep" name="nav" value="Reportes">
+        <label for="rep">Reportes</label>
+    </div>
+
+     <div class="card" style="width: 90%; display: none;" id="inventario">
+        <p class="text1">Inventario de Vehículos</p>
+        <p class="textsecundario">Todos los vehículos en el catálogo</p>
+
+        <div class="card" style="width: 98%; padding-left: 0; padding-right: 0;">
+            <div
+                style="border-bottom: solid lightgray 1px; width: 100%; display: flex; justify-content: space-between; margin-top: 24px; padding-bottom: 8px;">
+                <p class="text1" style="margin-left: 16px; width: 20%;">Vehículo</p>
+                <p class="text1">Tipo</p>
+                <p class="text1">Año</p>
+                <p class="text1">Precio</p>
+                <p class="text1">Estado</p>
+                <p class="text1" style="margin-right: 16px;">Acciones</p>
+            </div>
+
+            <div id="inv-list">
+                
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="card" style="width: 90%; display: none;" id="pendiente">
+        <p class="text1">Vehículos Pendientes de Aprobación</p>
+        <p class="textsecundario">Vehículos subidos por usuarios que esperan ser aprobados para mostrarse en el catálogo
+        </p>
+
+        <div class="card" style="width: 98%; padding-left: 0; padding-right: 0;">
+            <div
+                style="border-bottom: solid lightgray 1px; width: 100%; display: flex; justify-content: space-between; margin-top: 24px; padding-bottom: 8px;">
+                <p class="text1" style="margin-left: 16px; width: 20%;">Vehículo</p>
+                <p class="text1">Vendedor</p>
+                <p class="text1">Tipo</p>
+                <p class="text1">Precio</p>
+                <p class="text1">Modelo</p>
+                <p class="text1" style="margin-right: 16px;">Acciones</p>
+            </div>
+
+            <div id="pendiente-list">
+                
+            </div>
+
+
+        </div>
+
+    </div>
+
+     <div class="card" style="width: 90%; display: none;" id="Factura">
+        <p class="text1">Facturas y Ventas</p>
+        <p class="textsecundario">Historial de ventas completadas</p>
+
+        <div class="card" style="width: 98%; padding-left: 0; padding-right: 0;">
+            <div
+                style="border-bottom: solid lightgray 1px; width: 100%; display: flex; justify-content: space-between; margin-top: 24px; padding-bottom: 8px;">
+                <p class="text1" style="margin-left: 16px; width: 20%;">Factura</p>
+                <p class="text1">Vehículo</p>
+                <p class="text1">Comprador</p>
+                <p class="text1">Fecha</p>
+                <p class="text1">Método</p>
+                <p class="text1">Monto</p>
+                <p class="text1" style="margin-right: 16px;">Acciones</p>
+            </div>
+
+            <div id="Ventas-list">
+                
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script type="module" src="admin.js"></script>
+
+</html>

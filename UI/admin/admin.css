@@ -1,0 +1,60 @@
+body {
+    padding: 24px;
+}
+
+.card {
+    margin: 16px;
+    width: 25%;
+}
+
+.nav-container {
+    display: flex;
+    background: #eee;
+    padding: 8px;
+    border-radius: 12px;
+    gap: 20px;
+    width: max-content;
+}
+
+.nav-container input[type="radio"] {
+    display: none;
+}
+
+.nav-container label {
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
+    color: #333;
+}
+
+.nav-container label:hover {
+    background: #ddd;
+}
+
+.nav-container input[type="radio"]:checked+label {
+    background: white;
+    border: 1px solid rgb(150, 150, 150);
+}
+
+.fila {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    width: 100%;
+}
+
+.fila p {
+    width: 16%;
+    
+}
+
+.btn-approve, .btn-decline {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}

@@ -4,10 +4,15 @@ const btnPerson = document.getElementById('btnperson');
 const btnLoguin = document.getElementById('btnLoguin');
 const btnSingup = document.getElementById('btnSingup');
 const btnhome = document.getElementById('btnhome');
+const sell = document.getElementById("btnsell");
+const btnAdmin = document.getElementById("btnAdmin");
 
 
 let currentResizeObserver = null;
 let currentObservedBody = null;
+
+let currentUser = null;
+
 
 function ajusteIframe(url) {
 
@@ -62,20 +67,66 @@ function ajusteIframe(url) {
 }
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
   iframe.addEventListener("load", () => ajusteIframe(iframe.src));
 
+  btnLoguin.addEventListener('click', () =>
+    ajusteIframe("UI/loguin/loguin.html")
+  );
 
-  btnLoguin.addEventListener('click', () => ajusteIframe("/AutoSmart/UI/loguin/loguin.html"));
-  btnSingup.addEventListener('click', () => ajusteIframe("/AutoSmart/UI/Regis/regis.html"));
-  btnhome.addEventListener('click', () => ajusteIframe("/AutoSmart/UI/dasboard/dasboard.html"));
+  btnSingup.addEventListener('click', () =>
+    ajusteIframe("UI/Regis/regis.html")
+  );
 
+  btnhome.addEventListener('click', () =>
+    ajusteIframe("UI/dasboard/dasboard.html")
+  );
+
+   btnAdmin.addEventListener('click', () =>
+    ajusteIframe("UI/admin/admin.html")
+  );
 });
+
 
 btnPerson.addEventListener('click', () => {
   container.style.display =
     container.style.display === 'none' || container.style.display === ''
       ? 'flex'
       : 'none';
+});
+
+
+
+
+sell.addEventListener('click', () => {
+  if (!currentUser) {
+    ajusteIframe("UI/loguin/loguin.html");
+    return;
+  } else {
+    ajusteIframe("UI/sell/sell.html");
+  }
+});
+
+
+
+
+// 🚀 Recibir mensajes desde el iframe
+window.addEventListener("message", (event) => {
+
+  if (event.data?.action === "setUser") {
+
+    currentUser = event.data.user;
+
+    console.log("Usuario recibido:", currentUser);
+
+    if (currentUser.role === "admin") {
+      btnAdmin.style.display = "block"
+    }
+  }
+
+  if (event.data?.action === "changeView") {
+    ajusteIframe(event.data.url);
+  }
 });

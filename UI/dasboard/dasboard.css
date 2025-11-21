@@ -21,24 +21,7 @@ body {
     height: max-content;
 }
 
-.btn {
-    padding: 8px;
-    width: 100%;
-    text-align: start;
-    background-color: white;
-    border: 2px solid lightgray;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bolder;
-    align-items: center;
-    margin-top: 8px;
-}
 
-.btn:hover {
-    background-color: #fb7b09;
-    color: white;
-    cursor: pointer;
-}
 
 .productos {
     width: 90vw;

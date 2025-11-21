@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="detalles.css">
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Vehículo</title>
+</head>
+
+<body>
+
+    <div style="width: 65%; padding: 24px; display: flex; flex-direction: column;">
+        
+        <!-- Imagen Principal -->
+        <img id="img" style="width: 100%; height: 55%; border-radius: 16px;"
+            src="" alt="Vehículo">
+
+        <!-- Nombre y Precio -->
+        <div class="grupo2">
+            <h1 id="nombre">Nombre</h1>
+            <h2 id="precio">Precio</h2>
+        </div>
+
+        <div style="background-color: lightgray; height: 2px; margin: 8px;"></div>
+
+        <!-- Descripción -->
+        <h3>Descripción</h3>
+        <p id="descripcion" class="textsecundario">Descripción</p>
+
+        <div style="background-color: lightgray; height: 2px; margin: 8px;"></div>
+    </div>
+
+    <!-- LADO DERECHO -->
+    <div class="card" style="height: max-content;">
+        <button class="btn">Comprar ahora</button>
+
+        <h3>Contacta a nuestros Asesores</h3>
+        <button class="btnWhite">Enviar Mensaje</button>
+        <button class="btnWhite">Llama Ahora</button>
+        <button class="btnWhite">Enviar Email</button>
+
+        <h4>Especificaciones</h4>
+
+        <div class="grupo2">
+            <p class="textsecundario">Tipo</p>
+            <p id="tipo">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Marca</p>
+            <p id="marca">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Modelo</p>
+            <p id="modelo">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Año</p>
+            <p id="ano">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Kilometraje</p>
+            <p id="km">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Transmisión</p>
+            <p id="transmision">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Combustible</p>
+            <p id="combustible">x</p>
+        </div>
+
+        <div class="grupo2">
+            <p class="textsecundario">Condición</p>
+            <p id="condicion" style="padding: 4px; border: 1px solid lightgray; border-radius: 8px;">x</p>
+        </div>
+
+    </div>
+
+</body>
+
+<script type="module" src="detalles.js"></script>
+</html>

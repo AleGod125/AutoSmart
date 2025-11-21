@@ -16,13 +16,7 @@ body {
   width: 350px;
   text-align: center;
 }
-.titulo-degradado {
-  font-size: 40px;
-  font-weight: bold;
-  background: linear-gradient(to right, black, #d36506, #fb7b09);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 h2 {
   margin-bottom: 5px;
 }
@@ -30,10 +24,7 @@ p {
   margin-top: 0;
   color: #666;
 }
-.form-group {
-  text-align: left;
-  margin-bottom: 15px;
-}
+
 label {
   font-size: 14px;
   display: block;
