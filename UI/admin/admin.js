@@ -1,4 +1,4 @@
-import { fetchPendingVehicles, approveVehicule, fetchVehicles, fetchSales  } from "./domain/ViewModel.js";
+import { fetchPendingVehicles, approveVehicule, fetchVehicles, fetchSales  } from "/domain/ViewModel.js";
 
 const radios = document.querySelectorAll('input[name="nav"]');
 
