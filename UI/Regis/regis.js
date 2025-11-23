@@ -1,11 +1,11 @@
 import { registerUser } from "/domain/ViewModel.js";
+import { Iframe } from "/domain/UI.js";
+
 
 const form = document.querySelector("form");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    alert("Click")
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -16,6 +16,7 @@ form.addEventListener("submit", async (e) => {
         const result = await registerUser(name, email, password, phone);
 
         alert("Usuario registrado con éxito");
+        Iframe("UI/dasboard/dasboard.html")
         console.log(result);
 
 
